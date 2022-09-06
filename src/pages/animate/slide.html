@@ -1,0 +1,58 @@
+<!-- 一个标准的BUI页面 -->
+<style>
+    .box1,
+    .box2,
+    .box {
+        width: .6rem;
+        height: .6rem;
+        margin: .2rem;
+    }
+</style>
+<div class="bui-page bui-box-vertical">
+    <header>
+        <div class="bui-bar">
+            <div class="bui-bar-left">
+                <!-- 左边有图标示例 -->
+                <div class="bui-btn btn-back"><i class="icon-back"></i></div>
+            </div>
+            <div class="bui-bar-main">全屏多屏动画</div>
+            <div class="bui-bar-right">
+                <!-- 右边有图标示例 -->
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="uiSlide" class="bui-slide">
+            <div class="bui-slide-main">
+                <ul>
+                    <li>
+                        <div class="title">第一屏动画：每次进入播放一次</div>
+                        <!-- 第1屏 -->
+                        <div class="box success" anim-right="300"></div>
+                        <div class="box success" anim-transition="500ms" anim-right="400" anim-delay="100ms"></div>
+                        <div class="box warning" anim-transition="all 500ms ease-out" anim-right="500"
+                            anim-delay="300ms">
+                        </div>
+                        <div class="box warning bui-right" anim-transition="all 500ms ease-out" anim-left="300">
+                        </div>
+                    </li>
+                    <li style="display:none;">
+                        <div class="title">第2屏动画:只播放一次</div>
+
+                        <!--第2屏-->
+                        <div class="box1 success" anim-right="300"></div>
+                        <div class="box1 success" anim-transition="500ms" anim-right="400" anim-delay="100ms"></div>
+                        <div class="box1 warning" anim-transition="all 500ms ease-out" anim-right="500"
+                            anim-delay="300ms">
+                        </div>
+                        <div class="box1 warning bui-right" anim-transition="all 500ms ease-out" anim-left="300">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- 底部固定内容 -->
+    </footer>
+</div>

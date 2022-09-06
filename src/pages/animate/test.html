@@ -1,0 +1,42 @@
+﻿<style>
+	.moving2,
+	.moving {
+		width: 100px;
+		height: 100px;
+		line-height: 100px;
+		background: #ff3330;
+		color: #fff;
+		text-align: center;
+		z-index: 10;
+		margin: 0 auto;
+		/* position: absolute; */
+		/* left: 50%; */
+		/* top: 50%; */
+		/* margin-left: -50px; */
+		/* margin-top: -50px; */
+	}
+</style>
+<div class="bui-page">
+	<header id="bar" class="bui-bar">
+		<div class="bui-bar-left">
+			<a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+		</div>
+		<div class="bui-bar-main">动画控制器</div>
+		<div class="bui-bar-right">
+		</div>
+	</header>
+	<main>
+		<div class="moving" anim-left="200">
+			移动的元素A
+		</div>
+		<div class="moving" anim-transition="1500ms" anim-right="200" anim-width="300" anim-rotate="30">
+			移动的元素B
+		</div>
+		<div class="moving2" anim-transition="1300ms" anim-right="200" anim-down="50">
+			移动的元素
+		</div>
+	</main>
+</div>
+</body>
+
+</html>
