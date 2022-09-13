@@ -7,8 +7,6 @@ loader.define(function (requires, exports, module, global) {
         content: ""
     }, module.props);
 
-    window.document.title = "中秋祝福";
-
     var uiDialog = bui.dialog({
         id: "#uiDialog"
     });
@@ -40,22 +38,23 @@ loader.define(function (requires, exports, module, global) {
                 uiDialog.open();
             },
             preview() {
-                let protocol = window.location.protocol;
-                let host = window.location.host;
-                let path = window.location.pathname;
                 // 获取页面的Hash
                 var currentHash = bui.history.getHash();
-                // let url = bui.setUrlParams(protocol + "//" + host + path + "#" + currentHash.pid, this.$data.datas);
-                // let url = bui.setUrlParams(currentHash.pid, { name: this.$data.datas.name, other: this.$data.datas.other, content: this.$data.datas.content, });
-                let url = currentHash.pid + "?name=" + this.$data.datas.name + "&other=" + this.$data.datas.other + "&content=" + this.$data.datas.content
+
                 uiDialog.close();
 
                 bui.load({
-                    url: url,
+                    url: currentHash.url,
+                    param: this.$data.datas,
+                    replace: true
                 })
             }
         },
-        watch: {},
+        watch: {
+            "datas.name": function (val) {
+                window.document.title = val ? val + "的中秋祝福" : "中秋祝福";
+            }
+        },
         computed: {},
         templates: {
             tplWish(data) {
