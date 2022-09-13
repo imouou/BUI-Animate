@@ -24,7 +24,7 @@ npm run dev
 ```
 
 
-# 玩转BUI系列一--动画控制交互篇：bui.animate
+# 玩转BUI系列一--脚本动画控制交互篇：bui.animate
 
 ## 介绍
 
